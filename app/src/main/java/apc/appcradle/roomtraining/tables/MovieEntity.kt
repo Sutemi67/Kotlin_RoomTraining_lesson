@@ -16,4 +16,11 @@ data class MovieEntity(
     val description: String,
     @Ignore
     val image: Bitmap?
-)
+) {
+    constructor(id: Long, title: String, description: String) : this(
+        id,
+        title,
+        description,
+        image = null
+    )
+}
